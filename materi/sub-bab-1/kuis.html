@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuis</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <style>
+        body {
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        .navbar {
+            background-color: #ffffff;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .navbar-brand {
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        .nav-link {
+            color: #333;
+        }
+
+        .nav-link.active {
+            font-weight: bold;
+        }
+
+        .accordion-item {
+            margin-bottom: 20px;
+        }
+
+        .accordion-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+        }
+
+        .accordion-button:hover {
+            background-color: #0056b3;
+        }
+
+        .accordion-collapse {
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            border-top: none;
+            border-radius: 0 0 5px 5px;
+            padding: 15px;
+        }
+
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .btn-outline-success {
+            color: #28a745;
+            border-color: #28a745;
+        }
+
+        .btn-outline-success:hover {
+            color: #fff;
+            background-color: #28a745;
+            border-color: #28a745;
+        }
+
+        .btn-outline-danger {
+            color: #dc3545;
+            border-color: #dc3545;
+        }
+
+        .btn-outline-danger:hover {
+            color: #fff;
+            background-color: #dc3545;
+            border-color: #dc3545;
+        }
+
+        .question h3 {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .question label {
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="./index(2).html">Sistem Komputer</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="../../index.html">Beranda</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Materi
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <li><a class="dropdown-item" href="sub-bab-1/sistem-komputer.html">Komputer dan Komponen Penyusunnya</a></li>
+                      <li><a class="dropdown-item" href="sub-bab-1/kedua.html"> Interaksi Manusia dan Komputer</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mt-5">
+        <div class="row">
+            <div class="col-12 col-lg-3">
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                          Kuis
+                        </button>
+                      </h2>
+                      <div id="flush-collapseOne" class="accordion-collapse collapse show" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Kuis tentang komputer dan komponen penyusunnya, serta interaksi manusia dan komputer.</div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-9">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title mb-4">Kuis</h2>
+                        <form id="quizForm">
+                            <div class="question mb-4">
+                                <h3>1. Apa komponen utama dari sebuah komputer?</h3>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q1" id="q1a" value="CPU">
+                                    <label class="form-check-label" for="q1a">CPU</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q1" id="q1b" value="Monitor">
+                                    <label class="form-check-label" for="q1b">Monitor</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q1" id="q1c" value="Keyboard">
+                                    <label class="form-check-label" for="q1c">Keyboard</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q1" id="q1d" value="Mouse">
+                                    <label class="form-check-label" for="q1d">Mouse</label>
+                                </div>
+                            </div>
+                    
+                            <div class="question mb-4">
+                                <h3>2. Apa fungsi RAM dalam sebuah komputer?</h3>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q2" id="q2a" value="Penyimpanan permanen">
+                                    <label class="form-check-label" for="q2a">Penyimpanan permanen</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q2" id="q2b" value="Penyimpanan sementara">
+                                    <label class="form-check-label" for="q2b">Penyimpanan sementara</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q2" id="q2c" value="Mengontrol jaringan">
+                                    <label class="form-check-label" for="q2c">Mengontrol jaringan</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q2" id="q2d" value="Mengatur input dan output">
+                                    <label class="form-check-label" for="q2d">Mengatur input dan output</label>
+                                </div>
+                            </div>
+                    
+                            <div class="question mb-4">
+                                <h3>3. Apa singkatan dari GUI dalam konteks interaksi manusia dan komputer?</h3>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q3" id="q3a" value="General User Interface">
+                                    <label class="form-check-label" for="q3a">General User Interface</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q3" id="q3b" value="Graphical User Interface">
+                                    <label class="form-check-label" for="q3b">Graphical User Interface</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q3" id="q3c" value="Global User Interface">
+                                    <label class="form-check-label" for="q3c">Global User Interface</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q3" id="q3d" value="Graphics User Integration">
+                                    <label class="form-check-label" for="q3d">Graphics User Integration</label>
+                                </div>
+                            </div>
+                    
+                            <div class="question mb-4">
+                                <h3>4. Manakah berikut ini yang termasuk perangkat input?</h3>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q4" id="q4a" value="Printer">
+                                    <label class="form-check-label" for="q4a">Printer</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q4" id="q4b" value="Monitor">
+                                    <label class="form-check-label" for="q4b">Monitor</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q4" id="q4c" value="Keyboard">
+                                    <label class="form-check-label" for="q4c">Keyboard</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q4" id="q4d" value="Speaker">
+                                    <label class="form-check-label" for="q4d">Speaker</label>
+                                </div>
+                            </div>
+                    
+                            <div class="question mb-4">
+                                <h3>5. Apa tujuan utama dari Interaksi Manusia dan Komputer (HCI)?</h3>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q5" id="q5a" value="Memperbaiki performa hardware">
+                                    <label class="form-check-label" for="q5a">Memperbaiki performa hardware</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q5" id="q5b" value="Meningkatkan pengalaman pengguna">
+                                    <label class="form-check-label" for="q5b">Meningkatkan pengalaman pengguna</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q5" id="q5c" value="Menurunkan biaya produksi">
+                                    <label class="form-check-label" for="q5c">Menurunkan biaya produksi</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q5" id="q5d" value="Mengurangi konsumsi energi">
+                                    <label class="form-check-label" for="q5d">Mengurangi konsumsi energi</label>
+                                </div>
+                            </div>
+                    
+                            <button type="button" class="btn btn-primary" onclick="checkAnswers()">Submit</button>
+                        </form>
+                    
+                        <div id="result" class="mt-3"></div>
+                    
+                        <script>
+                            function checkAnswers() {
+                                var correctAnswers = ['CPU', 'Penyimpanan sementara', 'Graphical User Interface', 'Keyboard', 'Meningkatkan pengalaman pengguna'];
+                                var userAnswers = [];
+                                for (var i = 1; i <= 5; i++) {
+                                    var radios = document.getElementsByName('q' + i);
+                                    for (var j = 0; j < radios.length; j++) {
+                                        if (radios[j].checked) {
+                                            userAnswers.push(radios[j].value);
+                                        }
+                                    }
+                                }
+                                
+                                var score = 0;
+                                for (var k = 0; k < correctAnswers.length; k++) {
+                                    if (userAnswers[k] === correctAnswers[k]) {
+                                        score++;
+                                    }
+                                }
+                        
+                                // Menampilkan hasil skor dalam sebuah alert
+                                alert('Skor Anda: ' + score + ' dari 5');
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
